@@ -74,7 +74,9 @@ export default function App() {
         </div>
         <div className="flex items-center gap-6">
           <a 
-            href="#" 
+            href="https://t.me/retardoidonsol" 
+            target="_blank"
+            rel="noopener noreferrer"
             className="tg-btn px-6 py-3 rounded-full flex items-center gap-2 font-black text-sm uppercase"
             title="Telegram"
           >
@@ -229,7 +231,14 @@ export default function App() {
           Too dumb for Earth, just right for the Moon.
         </p>
         <div className="flex justify-center gap-6">
-          <a href="#" className="tg-btn p-4 rounded-full text-white"><Send className="w-6 h-6" /></a>
+          <a 
+            href="https://t.me/retardoidonsol" 
+            target="_blank"
+            rel="noopener noreferrer"
+            className="tg-btn p-4 rounded-full text-white"
+          >
+            <Send className="w-6 h-6" />
+          </a>
           <a href="#" className="bg-white/10 p-4 rounded-full text-white hover:bg-white/20 transition-colors"><TrendingUp className="w-6 h-6" /></a>
         </div>
       </footer>
