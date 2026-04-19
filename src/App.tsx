@@ -12,7 +12,7 @@ import {
   MousePointer2
 } from 'lucide-react';
 
-const CA = "xxxxxxxxxxxxxxxxxxxxxxxxxxxx";
+const CA = "6PPX433GUrTGFyZDQRcSuhNEGHGu8hKq1gfcd6Ncpump";
 const LOGO_URL = "https://cdn.shopify.com/s/files/1/0967/8087/8151/files/retardoid.png?v=1776613790";
 
 const Stars = () => {
