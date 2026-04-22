@@ -1,52 +1,21 @@
-import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'motion/react';
+import { useState } from 'react';
+import { motion } from 'motion/react';
 import { 
   Send, 
   Rocket, 
   Copy, 
   Check, 
-  ExternalLink, 
   TrendingUp, 
   ShieldCheck, 
   Wallet,
-  MousePointer2
+  MousePointer2,
+  Gamepad2,
+  PartyPopper,
+  Zap
 } from 'lucide-react';
 
-const CA = "6PPX433GUrTGFyZDQRcSuhNEGHGu8hKq1gfcd6Ncpump";
-const LOGO_URL = "https://cdn.shopify.com/s/files/1/0967/8087/8151/files/retardoid.png?v=1776613790";
-
-const Stars = () => {
-  const [stars, setStars] = useState<{ id: number; left: string; top: string; size: number; duration: string }[]>([]);
-
-  useEffect(() => {
-    const newStars = Array.from({ length: 150 }).map((_, i) => ({
-      id: i,
-      left: `${Math.random() * 100}%`,
-      top: `${Math.random() * 100}%`,
-      size: Math.random() * 3 + 1,
-      duration: `${Math.random() * 3 + 2}s`,
-    }));
-    setStars(newStars);
-  }, []);
-
-  return (
-    <div className="stars-container">
-      {stars.map((star) => (
-        <div
-          key={star.id}
-          className="star"
-          style={{
-            left: star.left,
-            top: star.top,
-            width: `${star.size}px`,
-            height: `${star.size}px`,
-            ['--duration' as any]: star.duration,
-          }}
-        />
-      ))}
-    </div>
-  );
-};
+const CA = "xxxxxxxxxxxxxxxxxxxxxxxxxxxx";
+const LOGO_URL = "https://cdn.shopify.com/s/files/1/0967/8087/8151/files/pflogo.jpg?v=1776876165";
 
 export default function App() {
   const [copied, setCopied] = useState(false);
@@ -58,88 +27,74 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen relative overflow-hidden font-sans selection:bg-magenta selection:text-white">
-      <Stars />
-      
-      {/* Navigation */}
-      <nav className="fixed top-0 w-full z-50 px-6 py-4 flex justify-between items-center backdrop-blur-md border-b border-white/10">
+    <div className="min-h-screen bg-white text-black font-sans selection:bg-pump-green selection:text-white">
+      {/* Header */}
+      <nav className="fixed top-0 w-full z-50 px-4 py-4 flex justify-between items-center bg-white/80 backdrop-blur-md border-b-4 border-black">
         <div className="flex items-center gap-3">
           <img 
             src={LOGO_URL} 
-            alt="Retardoid" 
-            className="w-12 h-12 logo-glow"
+            alt="MPFA Logo" 
+            className="w-12 h-12 rounded-lg pump-border"
             referrerPolicy="no-referrer"
           />
-          <span className="text-3xl meme-text italic tracking-tighter">$RETARDOID</span>
+          <span className="font-meme text-2xl tracking-tighter uppercase hidden sm:block">MAKE PUMP FUN AGAIN</span>
+          <span className="font-meme text-2xl tracking-tighter uppercase sm:hidden">$MPFA</span>
         </div>
-        <div className="flex items-center gap-6">
+        <div className="flex items-center gap-4">
           <a 
-            href="https://t.me/retardoidonsol" 
-            target="_blank"
-            rel="noopener noreferrer"
-            className="tg-btn px-6 py-3 rounded-full flex items-center gap-2 font-black text-sm uppercase"
+            href="#" 
+            className="bg-black text-white p-3 rounded-lg hover:scale-110 transition-transform pump-shadow-green"
             title="Telegram"
           >
-            <Send className="w-5 h-5" />
-            TELEGRAM
+            <Send className="w-6 h-6" />
           </a>
-          <div className="hidden md:block px-6 py-3 border-2 border-white rounded-full font-black uppercase tracking-widest text-xs">
-            Solana Mainnet
-          </div>
+          <button className="bg-[#24d182] text-black px-6 py-3 rounded-lg font-black text-sm uppercase pump-shadow hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[6px_6px_0px_#000000] transition-all border-4 border-black">
+            BUY $MPFA
+          </button>
         </div>
       </nav>
 
       {/* Hero Section */}
-      <section className="relative pt-40 pb-20 px-6 max-w-7xl mx-auto flex flex-col items-center text-center">
+      <section className="relative pt-32 pb-20 px-4 max-w-7xl mx-auto flex flex-col items-center text-center overflow-hidden">
         <motion.div
-          initial={{ opacity: 0, scale: 0.5, rotate: -10 }}
+          initial={{ opacity: 0, scale: 0.8, rotate: -5 }}
           animate={{ opacity: 1, scale: 1, rotate: 0 }}
-          transition={{ type: "spring", stiffness: 100 }}
-          className="relative mb-12"
+          className="relative mb-10 w-full max-w-sm"
         >
-          <div className="absolute inset-0 bg-white/5 blur-[100px] rounded-full animate-pulse" />
-          <motion.img 
+          <div className="absolute inset-0 bg-[#24d182]/20 blur-[120px] rounded-full" />
+          <img 
             src={LOGO_URL} 
-            alt="Retardoid Logo" 
-            className="w-64 h-64 md:w-96 md:h-96 relative z-10 drop-shadow-2xl"
-            animate={{ 
-              y: [0, -20, 0],
-              rotate: [0, 5, -5, 0]
-            }}
-            transition={{ 
-              duration: 6,
-              repeat: Infinity,
-              ease: "easeInOut"
-            }}
+            alt="Logo" 
+            className="w-full h-auto relative z-10 floating rounded-3xl border-8 border-black pump-shadow"
             referrerPolicy="no-referrer"
           />
         </motion.div>
 
         <motion.h1 
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          className="text-6xl sm:text-8xl md:text-[12rem] mb-4 meme-text"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="text-6xl sm:text-8xl md:text-[10rem] mb-6 font-meme leading-[0.8] tracking-tighter uppercase italic"
         >
-          Retardoid
+          MAKE PUMP <span className="text-[#24d182]">FUN</span> AGAIN
         </motion.h1>
         
         <motion.div 
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.2 }}
-          className="text-2xl sm:text-3xl md:text-4xl text-neon-cyan mb-8 font-black italic uppercase"
+          className="bg-black text-[#24d182] px-8 py-2 rounded-full font-black text-2xl sm:text-4xl mb-10 inline-block rotate-2 pump-shadow"
         >
-          $retardoid
+          $MPFA
         </motion.div>
 
         <motion.p 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
-          className="max-w-3xl text-xl sm:text-2xl md:text-3xl text-cyan-300 leading-tight font-black italic mb-12 uppercase px-4"
+          className="max-w-3xl text-xl sm:text-3xl text-black font-bold leading-tight mb-12"
         >
-          Retardoid is a low-IQ asteroid who is so incredibly dumb that instead of falling down to Earth, 
-          he missed the planet entirely and is now flying full speed TOWARDS THE MOON.
+          The mission is simple: Make pump.fun memecoins fun again! 
+          The whole world is joining together to laugh, trade, and vibe with $MPFA. 🌍✨
         </motion.p>
 
         {/* CA Box */}
@@ -147,71 +102,118 @@ export default function App() {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.4 }}
-          className="ca-box p-4 md:p-6 rounded-lg w-full max-w-2xl mb-12 flex flex-col md:flex-row items-center justify-between gap-4"
+          className="bg-white border-4 border-black p-6 rounded-2xl w-full max-w-3xl mb-12 flex flex-col md:flex-row items-center justify-between gap-6 pump-shadow-green"
         >
-          <div className="flex flex-col items-center sm:items-start overflow-hidden w-full">
-            <span className="text-[10px] sm:text-xs uppercase tracking-widest text-gray-400 mb-1 font-mono font-bold text-center sm:text-left">Contract Address:</span>
-            <code className="text-lg sm:text-xl md:text-2xl font-mono text-yellow-400 break-all w-full text-center sm:text-left font-bold select-all leading-tight">{CA}</code>
+          <div className="flex flex-col items-center md:items-start overflow-hidden w-full">
+            <span className="text-xs uppercase font-black tracking-widest text-black/50 mb-1">Contract Address</span>
+            <code className="text-lg sm:text-2xl font-mono text-black break-all w-full text-center md:text-left font-black select-all">{CA}</code>
           </div>
           <button 
             onClick={copyToClipboard}
-            className="flex items-center gap-2 bg-white/10 hover:bg-white/20 transition-colors px-6 py-3 rounded-lg font-black whitespace-nowrap border-2 border-white/20"
+            className="flex items-center gap-2 bg-[#24d182] hover:bg-[#1fbc73] text-black px-8 py-4 rounded-xl font-black whitespace-nowrap border-4 border-black transition-all active:translate-y-1"
           >
-            {copied ? <Check className="w-4 h-4 text-solana-green" /> : <Copy className="w-4 h-4" />}
+            {copied ? <Check className="w-5 h-5" /> : <Copy className="w-5 h-5" />}
             {copied ? "COPIED!" : "COPY CA"}
           </button>
         </motion.div>
 
-        <div className="flex flex-col sm:flex-row justify-center gap-4 w-full px-4">
-          <button className="flex items-center justify-center gap-2 bg-magenta px-8 py-4 sm:px-10 sm:py-5 rounded-lg font-black text-lg sm:text-xl hover:scale-105 transition-transform shadow-[4px_4px_0px_white] w-full sm:w-auto">
-            <TrendingUp className="w-6 h-6" />
-            CHART
+        <div className="flex flex-col sm:flex-row justify-center gap-6 w-full max-w-2xl px-4">
+          <button className="flex-1 flex items-center justify-center gap-3 bg-black text-white px-8 py-5 rounded-2xl font-black text-2xl hover:scale-105 transition-transform pump-shadow-green">
+            <TrendingUp className="w-8 h-8" />
+            LIVE CHART
           </button>
-          <button className="flex items-center justify-center gap-2 bg-cyan-400 text-black px-8 py-4 sm:px-10 sm:py-5 rounded-lg font-black text-lg sm:text-xl hover:scale-105 transition-transform shadow-[4px_4px_0px_magenta] w-full sm:w-auto">
-            <Rocket className="w-6 h-6" />
+          <button className="flex-1 flex items-center justify-center gap-3 bg-[#24d182] text-black px-8 py-5 rounded-2xl font-black text-2xl hover:scale-105 transition-transform pump-shadow border-4 border-black">
+            <Rocket className="w-8 h-8" />
             PUMP.FUN
           </button>
         </div>
       </section>
 
-      {/* How to Buy Section */}
-      <section className="relative py-20 px-4 sm:px-6 bg-white/[0.02]">
+      {/* Fun Mission Section */}
+      <section className="relative py-24 px-4 bg-black text-white overflow-hidden">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-5xl md:text-7xl font-meme mb-8 leading-none uppercase italic text-[#24d182]">THE FUN MANIFESTO</h2>
+            <div className="space-y-6 text-xl md:text-2xl font-bold leading-relaxed">
+              <p className="flex gap-4">
+                <PartyPopper className="w-8 h-8 text-[#24d182] shrink-0" />
+                No more boring charts and serious talk. We're here for the pure, unadulterated joy of memecoins.
+              </p>
+              <p className="flex gap-4">
+                <Gamepad2 className="w-8 h-8 text-[#24d182] shrink-0" />
+                Community games, laughter, and high-energy vibes are our core utility.
+              </p>
+              <p className="flex gap-4">
+                <Zap className="w-8 h-8 text-[#24d182] shrink-0" />
+                MPFA isn't just a coin; it's a movement to reclaim the "MEME" in memecoins.
+              </p>
+            </div>
+          </motion.div>
+          <div className="grid grid-cols-2 gap-4">
+            <div className="bg-[#24d182] p-8 rounded-3xl pump-shadow-green border-4 border-white rotate-3">
+              <div className="font-meme text-5xl text-black">100%</div>
+              <div className="font-black text-black text-lg uppercase">PURE FUN</div>
+            </div>
+            <div className="bg-white p-8 rounded-3xl pump-shadow border-4 border-[#24d182] -rotate-3">
+              <div className="font-meme text-5xl text-black">NO</div>
+              <div className="font-black text-black text-lg uppercase">BORING VIBES</div>
+            </div>
+            <div className="col-span-2 bg-[#24d182] p-8 rounded-3xl pump-shadow-green border-4 border-white">
+              <div className="font-meme text-5xl text-black text-center">WORLDWIDE</div>
+              <div className="font-black text-black text-lg uppercase text-center">ENTERTAINMENT</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Steps to Fun */}
+      <section className="py-24 px-4 bg-white text-black">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl md:text-6xl text-center mb-12 sm:mb-16 uppercase tracking-[0.2em] sm:tracking-[0.5em] text-neon-pink font-black">How to Buy on Pump.fun</h2>
+          <h2 className="text-5xl md:text-7xl font-meme text-center mb-20 uppercase italic tracking-tighter">JOIN THE MOKAH!</h2>
           
-          <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
             {[
               {
                 icon: Wallet,
-                title: "GET WALLET",
-                desc: "Download Phantom extension"
+                title: "PREPARE WALLET",
+                desc: "Get Phantom or any Sol wallet ready for action.",
+                color: "bg-[#24d182]"
               },
               {
                 icon: Rocket,
-                title: "GET $SOL",
-                desc: "Get some SOL in it"
+                title: "LOAD $SOL",
+                desc: "Send some SOL to your wallet from your exchange.",
+                color: "bg-black text-white"
               },
               {
                 icon: MousePointer2,
-                title: "PASTE CA",
-                desc: "Paste CA and search on Pump.fun"
+                title: "VISIT PUMP.FUN",
+                desc: "Search for our CA and prepare for the pump.",
+                color: "bg-[#24d182]"
               },
               {
                 icon: ShieldCheck,
-                title: "FULL RETARD",
-                desc: "Swap and hold forever"
+                title: "APE & SMILE",
+                desc: "Grab $MPFA and enjoy the ride with the world!",
+                color: "bg-black text-white"
               }
             ].map((step, i) => (
               <motion.div 
                 key={i}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="step-card p-6 flex flex-col group transition-all hover:bg-white/10"
+                className={`${step.color} p-8 rounded-3xl border-4 border-black pump-shadow transition-transform hover:-translate-y-2 group`}
               >
-                <div className="text-neon-cyan font-mono font-bold text-sm mb-2">STEP 0{i + 1}</div>
-                <h3 className="text-xl sm:text-2xl mb-2 text-white font-black uppercase leading-tight italic">{step.title}</h3>
-                <p className="text-white/40 font-mono text-[10px] sm:text-xs uppercase tracking-widest">{step.desc}</p>
+                <div className="mb-6 group-hover:scale-125 transition-transform duration-300">
+                  <step.icon className="w-10 h-10" />
+                </div>
+                <h3 className="text-2xl font-black mb-3 italic uppercase leading-none">{step.title}</h3>
+                <p className="font-bold opacity-80">{step.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -219,32 +221,25 @@ export default function App() {
       </section>
 
       {/* Footer */}
-      <footer className="py-20 px-6 text-center border-t border-white/10 relative z-10">
-        <img 
-          src={LOGO_URL} 
-          alt="Retardoid small" 
-          className="w-20 h-20 mx-auto mb-6 logo-glow"
-          referrerPolicy="no-referrer"
-        />
-        <div className="text-4xl mb-4 meme-text opacity-100">$RETARDOID</div>
-        <p className="text-white/40 text-sm font-black uppercase tracking-[0.2em] mb-8">
-          Too dumb for Earth, just right for the Moon.
-        </p>
-        <div className="flex justify-center gap-6">
-          <a 
-            href="https://t.me/retardoidonsol" 
-            target="_blank"
-            rel="noopener noreferrer"
-            className="tg-btn p-4 rounded-full text-white"
-          >
-            <Send className="w-6 h-6" />
-          </a>
-          <a href="#" className="bg-white/10 p-4 rounded-full text-white hover:bg-white/20 transition-colors"><TrendingUp className="w-6 h-6" /></a>
+      <footer className="py-20 px-4 bg-[#24d182] text-black border-t-8 border-black text-center relative overflow-hidden">
+        <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none" style={{ backgroundImage: `url(${LOGO_URL})`, backgroundSize: '200px' }} />
+        <div className="relative z-10">
+          <img 
+            src={LOGO_URL} 
+            alt="MPFA" 
+            className="w-24 h-24 mx-auto mb-10 rounded-2xl border-4 border-black pump-shadow"
+            referrerPolicy="no-referrer"
+          />
+          <div className="text-5xl md:text-7xl font-meme mb-6 uppercase italic leading-none">MAKE PUMP FUN AGAIN</div>
+          <p className="max-w-2xl mx-auto text-xl md:text-2xl font-black uppercase tracking-tight mb-12 opacity-90 leading-tight">
+            The mission to make memecoins fun again starts with YOU. $MPFA TO THE WORLD!
+          </p>
+          <div className="flex justify-center gap-8">
+            <a href="#" className="bg-black text-white p-5 rounded-2xl hover:scale-110 transition-transform pump-shadow border-2 border-white"><Send className="w-8 h-8" /></a>
+            <a href="#" className="bg-white text-black p-5 rounded-2xl hover:scale-110 transition-transform pump-shadow border-2 border-black"><TrendingUp className="w-8 h-8" /></a>
+          </div>
         </div>
       </footer>
-
-      {/* Background Decoration */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150%] h-[150%] bg-[radial-gradient(circle_at_center,rgba(26,26,58,0.1)_0%,transparent_70%)] pointer-events-none -z-10" />
     </div>
   );
 }
