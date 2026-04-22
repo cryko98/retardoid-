@@ -14,7 +14,7 @@ import {
   Zap
 } from 'lucide-react';
 
-const CA = "xxxxxxxxxxxxxxxxxxxxxxxxxxxx";
+const CA = "dsaF5F9WaeVWw3GtyoXMAZQ9y6qrMARPDC165N4pump";
 const LOGO_URL = "https://cdn.shopify.com/s/files/1/0967/8087/8151/files/pflogo.jpg?v=1776876165";
 
 export default function App() {
@@ -42,7 +42,9 @@ export default function App() {
         </div>
         <div className="flex items-center gap-4">
           <a 
-            href="#" 
+            href="https://t.me/makepumpfunagain" 
+            target="_blank"
+            rel="noopener noreferrer"
             className="bg-black text-white p-3 rounded-lg hover:scale-110 transition-transform pump-shadow-green"
             title="Telegram"
           >
@@ -235,7 +237,14 @@ export default function App() {
             The mission to make memecoins fun again starts with YOU. $MPFA TO THE WORLD!
           </p>
           <div className="flex justify-center gap-8">
-            <a href="#" className="bg-black text-white p-5 rounded-2xl hover:scale-110 transition-transform pump-shadow border-2 border-white"><Send className="w-8 h-8" /></a>
+            <a 
+              href="https://t.me/makepumpfunagain" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-black text-white p-5 rounded-2xl hover:scale-110 transition-transform pump-shadow border-2 border-white"
+            >
+              <Send className="w-8 h-8" />
+            </a>
             <a href="#" className="bg-white text-black p-5 rounded-2xl hover:scale-110 transition-transform pump-shadow border-2 border-black"><TrendingUp className="w-8 h-8" /></a>
           </div>
         </div>
