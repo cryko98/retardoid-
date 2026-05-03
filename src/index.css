@@ -1,49 +1,37 @@
-@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Inter:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Inter:wght@400;700;900&family=Oswald:wght@400;700&display=swap');
 @import "tailwindcss";
 
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-meme: "Luckiest Guy", cursive;
+  --font-heading: "Oswald", sans-serif;
 }
 
 :root {
-  --color-pump-green: #24d182;
-  --color-pump-dark: #000000;
-  --color-pump-white: #ffffff;
+  --color-mtga-red: #E01E35;
+  --color-mtga-black: #000000;
+  --color-mtga-white: #ffffff;
 }
 
 body {
-  @apply bg-black text-white selection:bg-[#24d182] selection:text-black;
+  @apply bg-white text-black selection:bg-[#E01E35] selection:text-white;
   font-family: var(--font-sans);
 }
 
-.pump-gradient {
-  background: linear-gradient(135deg, #24d182 0%, #1a9c61 100%);
+.troll-border {
+  border: 4px solid #000000;
 }
 
-.pump-border {
-  border: 4px solid #24d182;
+.troll-shadow {
+  box-shadow: 8px 8px 0px #E01E35;
 }
 
-.pump-shadow {
+.troll-shadow-black {
   box-shadow: 8px 8px 0px #000000;
 }
 
-.pump-shadow-green {
-  box-shadow: 8px 8px 0px #24d182;
-}
-
-.meme-heading {
-  font-family: var(--font-meme);
-  text-shadow: 4px 4px 0px #000000;
-}
-
-.floating {
-  animation: float 3s ease-in-out infinite;
-}
-
-@keyframes float {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
-  100% { transform: translateY(0px); }
+.heading-bold {
+  font-family: var(--font-heading);
+  text-transform: uppercase;
+  font-weight: 700;
 }
