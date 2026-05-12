@@ -15,10 +15,10 @@ import {
   Send
 } from 'lucide-react';
 
-const CA = "xxxxxxxxxxxxxxxxxxxxxxxx";
+const CA = "45pYwARFdL9Y5iUY8tdwWNi2xLDgtauGQPDQyGffpump";
 const LOGO_URL = "https://pbs.twimg.com/media/HIH4A_pXoAAFMIP?format=jpg&name=small";
 const BANNER_URL = "https://pbs.twimg.com/media/HIH4GwoXUAA-aX5?format=jpg&name=large";
-const TELEGRAM_URL = "https://t.me/trollnaldo";
+const TELEGRAM_URL = "https://t.me/trolnaldo";
 
 export default function App() {
   const [copied, setCopied] = useState(false);
@@ -66,25 +66,25 @@ export default function App() {
         <div className="flex items-center gap-2 sm:gap-3">
           <img 
             src={LOGO_URL} 
-            alt="Trollnaldo Logo" 
+            alt="Trolnaldo Logo" 
             className="w-10 h-10 sm:w-12 sm:h-12 rounded-full border-2 border-black"
             referrerPolicy="no-referrer"
           />
-          <span className="heading-bold text-xl sm:text-2xl tracking-tighter hidden sm:block italic uppercase">TROLLNALDO</span>
-          <span className="heading-bold text-xl sm:text-2xl tracking-tighter sm:hidden italic uppercase">$TROLLNALDO</span>
+          <span className="heading-bold text-xl sm:text-2xl tracking-tighter hidden sm:block italic uppercase">TROLNALDO</span>
+          <span className="heading-bold text-xl sm:text-2xl tracking-tighter sm:hidden italic uppercase">$TROLNALDO</span>
         </div>
         <div className="flex items-center gap-2 sm:gap-4">
           <a 
             href={TELEGRAM_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-black text-white p-2 sm:p-3 rounded-lg hover:bg-[#E01E35] transition-colors trollnaldo-shadow"
+            className="bg-black text-white p-2 sm:p-3 rounded-lg hover:bg-[#E01E35] transition-colors trolnaldo-shadow"
             title="Telegram"
           >
             <Send className="w-5 h-5 sm:w-6 sm:h-6" />
           </a>
-          <button className="bg-[#E01E35] text-white px-3 sm:px-6 py-2 sm:py-3 rounded-lg font-black text-xs sm:text-sm uppercase border-2 border-black trollnaldo-shadow-black hover:translate-x-[2px] hover:translate-y-[2px] transition-all">
-            BUY <span className="hidden xs:inline">$TROLLNALDO</span>
+          <button className="bg-[#E01E35] text-white px-3 sm:px-6 py-2 sm:py-3 rounded-lg font-black text-xs sm:text-sm uppercase border-2 border-black trolnaldo-shadow-black hover:translate-x-[2px] hover:translate-y-[2px] transition-all">
+            BUY <span className="hidden xs:inline">$TROLNALDO</span>
           </button>
         </div>
       </nav>
@@ -98,8 +98,8 @@ export default function App() {
         >
           <img 
             src={BANNER_URL} 
-            alt="Trollnaldo Banner" 
-            className="w-full h-auto rounded-3xl trollnaldo-border trollnaldo-shadow object-contain md:h-[400px] bg-gray-100"
+            alt="Trolnaldo Banner" 
+            className="w-full h-auto rounded-3xl trolnaldo-border trolnaldo-shadow object-contain md:h-[400px] bg-gray-100"
             referrerPolicy="no-referrer"
           />
         </motion.div>
@@ -120,9 +120,9 @@ export default function App() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.2 }}
-          className="bg-[#E01E35] text-white px-6 sm:px-10 py-2 sm:py-3 rounded-lg font-black text-2xl sm:text-5xl mb-10 inline-block trollnaldo-shadow-black border-2 border-black -rotate-1"
+          className="bg-[#E01E35] text-white px-6 sm:px-10 py-2 sm:py-3 rounded-lg font-black text-2xl sm:text-5xl mb-10 inline-block trolnaldo-shadow-black border-2 border-black -rotate-1"
         >
-          $TROLLNALDO
+          $TROLNALDO
         </motion.div>
 
         <motion.p 
@@ -131,7 +131,7 @@ export default function App() {
           transition={{ delay: 0.3 }}
           className="max-w-4xl text-xl sm:text-3xl text-black font-bold leading-tight mb-12 uppercase italic"
         >
-          Cristiano Trollnaldo is the <span className="text-[#E01E35]">greatest and biggest</span> troll footballer of all time. SIUUUUU to the moon!
+          Cristiano Trolnaldo is the <span className="text-[#E01E35]">greatest and biggest</span> troll footballer of all time. SIUUUUU to the moon!
         </motion.p>
 
         {/* Contract Address Box */}
@@ -139,7 +139,7 @@ export default function App() {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.4 }}
-          className="bg-white border-4 border-black p-6 rounded-2xl w-full max-w-4xl mb-12 flex flex-col md:flex-row items-center justify-between gap-6 trollnaldo-shadow"
+          className="bg-white border-4 border-black p-6 rounded-2xl w-full max-w-4xl mb-12 flex flex-col md:flex-row items-center justify-between gap-6 trolnaldo-shadow"
         >
           <div className="flex flex-col items-center md:items-start overflow-hidden w-full">
             <span className="text-[10px] sm:text-xs uppercase font-black tracking-widest text-black/50 mb-1">Contract Address (Solana)</span>
@@ -155,11 +155,11 @@ export default function App() {
         </motion.div>
 
         <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6 w-full max-w-2xl px-4 text-center">
-          <button className="flex-1 flex items-center justify-center gap-3 bg-black text-white px-8 py-4 sm:py-5 rounded-2xl font-black text-xl sm:text-2xl hover:bg-[#E01E35] transition-colors trollnaldo-shadow border-2 border-white">
+          <button className="flex-1 flex items-center justify-center gap-3 bg-black text-white px-8 py-4 sm:py-5 rounded-2xl font-black text-xl sm:text-2xl hover:bg-[#E01E35] transition-colors trolnaldo-shadow border-2 border-white">
             <TrendingUp className="w-6 h-6 sm:w-8 sm:h-8" />
             CHART
           </button>
-          <button className="flex-1 flex items-center justify-center gap-3 bg-[#E01E35] text-white px-8 py-4 sm:py-5 rounded-2xl font-black text-xl sm:text-2xl hover:bg-black transition-colors trollnaldo-shadow-black border-2 border-black">
+          <button className="flex-1 flex items-center justify-center gap-3 bg-[#E01E35] text-white px-8 py-4 sm:py-5 rounded-2xl font-black text-xl sm:text-2xl hover:bg-black transition-colors trolnaldo-shadow-black border-2 border-black">
             <Rocket className="w-6 h-6 sm:w-8 sm:h-8" />
             BUY
           </button>
@@ -191,15 +191,15 @@ export default function App() {
             </div>
           </motion.div>
           <div className="grid grid-cols-2 gap-6 text-center">
-            <div className="bg-[#E01E35] p-8 rounded-3xl border-4 border-white trollnaldo-shadow-black rotate-2">
+            <div className="bg-[#E01E35] p-8 rounded-3xl border-4 border-white trolnaldo-shadow-black rotate-2">
               <div className="heading-bold text-6xl text-white">100%</div>
               <div className="font-black text-white text-xl uppercase">GOAT</div>
             </div>
-            <div className="bg-white p-8 rounded-3xl border-4 border-[#E01E35] trollnaldo-shadow -rotate-2">
+            <div className="bg-white p-8 rounded-3xl border-4 border-[#E01E35] trolnaldo-shadow -rotate-2">
               <div className="heading-bold text-6xl text-black">0%</div>
               <div className="font-black text-black text-xl uppercase">MERCY</div>
             </div>
-            <div className="col-span-2 bg-[#E01E35] p-10 rounded-3xl border-4 border-black trollnaldo-shadow-black">
+            <div className="col-span-2 bg-[#E01E35] p-10 rounded-3xl border-4 border-black trolnaldo-shadow-black">
               <div className="heading-bold text-7xl text-white italic">SIUUUUUUUU</div>
             </div>
           </div>
@@ -221,14 +221,14 @@ export default function App() {
               },
               {
                 icon: Globe,
-                title: "FIND TROLLNALDO",
-                desc: "Search $TROLLNALDO on your favorite DEX.",
+                title: "FIND TROLNALDO",
+                desc: "Search $TROLNALDO on your favorite DEX.",
                 color: "bg-black text-white"
               },
               {
                 icon: MousePointer2,
                 title: "SWAP IT",
-                desc: "Swap SOL for $TROLLNALDO and hold the line.",
+                desc: "Swap SOL for $TROLNALDO and hold the line.",
                 color: "bg-[#E01E35] text-white"
               },
               {
@@ -243,7 +243,7 @@ export default function App() {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className={`${step.color} p-10 rounded-3xl border-4 border-black trollnaldo-shadow transition-all hover:scale-105 group relative overflow-hidden`}
+                className={`${step.color} p-10 rounded-3xl border-4 border-black trolnaldo-shadow transition-all hover:scale-105 group relative overflow-hidden`}
               >
                 <div className="absolute top-2 right-4 text-7xl font-black opacity-10 leading-none">{i+1}</div>
                 <div className="mb-6">
@@ -263,11 +263,11 @@ export default function App() {
         <div className="relative z-10">
           <img 
             src={LOGO_URL} 
-            alt="Trollnaldo Footer Logo" 
-            className="w-20 h-20 sm:w-32 sm:h-32 mx-auto mb-8 sm:mb-10 rounded-full border-4 border-black trollnaldo-shadow-black"
+            alt="Trolnaldo Footer Logo" 
+            className="w-20 h-20 sm:w-32 sm:h-32 mx-auto mb-8 sm:mb-10 rounded-full border-4 border-black trolnaldo-shadow-black"
             referrerPolicy="no-referrer"
           />
-          <div className="text-5xl sm:text-7xl md:text-9xl heading-bold mb-6 sm:mb-8 leading-none italic tracking-tighter uppercase">TROLLNALDO</div>
+          <div className="text-5xl sm:text-7xl md:text-9xl heading-bold mb-6 sm:mb-8 leading-none italic tracking-tighter uppercase">TROLNALDO</div>
           <p className="max-w-3xl mx-auto text-xl sm:text-3xl font-black uppercase italic mb-10 sm:mb-12 leading-none px-4">
             THE GOAT OF TROLLS. SIUUUUUUUUUUUUUUUU!
           </p>
@@ -276,17 +276,17 @@ export default function App() {
               href={TELEGRAM_URL} 
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-black text-white p-4 sm:p-6 rounded-2xl hover:bg-white hover:text-black transition-all trollnaldo-shadow border-2 border-white flex items-center justify-center"
+              className="bg-black text-white p-4 sm:p-6 rounded-2xl hover:bg-white hover:text-black transition-all trolnaldo-shadow border-2 border-white flex items-center justify-center"
             >
               <Send className="w-8 h-8 sm:w-10 sm:h-10" />
             </a>
-            <a href="#" className="bg-white text-black p-4 sm:p-6 rounded-2xl hover:bg-black hover:text-white transition-all trollnaldo-shadow-black border-2 border-black text-xl sm:text-3xl font-black flex items-center justify-center gap-4 uppercase">
+            <a href="#" className="bg-white text-black p-4 sm:p-6 rounded-2xl hover:bg-black hover:text-white transition-all trolnaldo-shadow-black border-2 border-black text-xl sm:text-3xl font-black flex items-center justify-center gap-4 uppercase">
               <TrendingUp className="w-8 h-8 sm:w-10 sm:h-10" />
               CHART
             </a>
           </div>
           <div className="mt-20 font-black text-sm uppercase tracking-widest opacity-80">
-            © 2026 TROLLNALDO. THE GREATEST TROLL FOOTBALLER.
+            © 2026 TROLNALDO. THE GREATEST TROLL FOOTBALLER.
           </div>
         </div>
       </footer>

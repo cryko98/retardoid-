@@ -8,9 +8,9 @@
 }
 
 :root {
-  --color-trollnaldo-main: #E01E35; /* Portuguese Red */
-  --color-trollnaldo-black: #000000;
-  --color-trollnaldo-white: #ffffff;
+  --color-trolnaldo-main: #E01E35; /* Portuguese Red */
+  --color-trolnaldo-black: #000000;
+  --color-trolnaldo-white: #ffffff;
 }
 
 body {
@@ -18,15 +18,15 @@ body {
   font-family: var(--font-sans);
 }
 
-.trollnaldo-border {
+.trolnaldo-border {
   border: 4px solid #000000;
 }
 
-.trollnaldo-shadow {
+.trolnaldo-shadow {
   box-shadow: 8px 8px 0px #E01E35;
 }
 
-.trollnaldo-shadow-black {
+.trolnaldo-shadow-black {
   box-shadow: 8px 8px 0px #000000;
 }
 
