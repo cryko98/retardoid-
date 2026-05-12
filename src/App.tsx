@@ -11,19 +11,14 @@ import {
   Globe,
   Users,
   Flame,
-  Trophy
+  Trophy,
+  Send
 } from 'lucide-react';
 
 const CA = "xxxxxxxxxxxxxxxxxxxxxxxx";
 const LOGO_URL = "https://pbs.twimg.com/media/HIH4A_pXoAAFMIP?format=jpg&name=small";
 const BANNER_URL = "https://pbs.twimg.com/media/HIH4GwoXUAA-aX5?format=jpg&name=large";
-const TWITTER_URL = "https://x.com/i/communities/2025572344987521076";
-
-const XIcon = ({ className }: { className?: string }) => (
-  <svg viewBox="0 0 24 24" aria-hidden="true" className={className} fill="currentColor">
-    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
-  </svg>
-);
+const TELEGRAM_URL = "https://t.me/trollnaldo";
 
 export default function App() {
   const [copied, setCopied] = useState(false);
@@ -80,13 +75,13 @@ export default function App() {
         </div>
         <div className="flex items-center gap-4">
           <a 
-            href={TWITTER_URL}
+            href={TELEGRAM_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="bg-black text-white p-3 rounded-lg hover:bg-[#E01E35] transition-colors trollnaldo-shadow"
-            title="Twitter"
+            title="Telegram"
           >
-            <XIcon className="w-6 h-6" />
+            <Send className="w-6 h-6" />
           </a>
           <button className="bg-[#E01E35] text-white px-6 py-3 rounded-lg font-black text-sm uppercase border-2 border-black trollnaldo-shadow-black hover:translate-x-[2px] hover:translate-y-[2px] transition-all">
             BUY $TROLLNALDO
@@ -278,12 +273,12 @@ export default function App() {
           </p>
           <div className="flex justify-center gap-10">
             <a 
-              href={TWITTER_URL} 
+              href={TELEGRAM_URL} 
               target="_blank"
               rel="noopener noreferrer"
               className="bg-black text-white p-6 rounded-2xl hover:bg-white hover:text-black transition-all trollnaldo-shadow border-2 border-white flex items-center justify-center"
             >
-              <XIcon className="w-10 h-10" />
+              <Send className="w-10 h-10" />
             </a>
             <a href="#" className="bg-white text-black p-6 rounded-2xl hover:bg-black hover:text-white transition-all trollnaldo-shadow-black border-2 border-black text-3xl font-black flex items-center gap-4 uppercase">
               <TrendingUp className="w-10 h-10" />
