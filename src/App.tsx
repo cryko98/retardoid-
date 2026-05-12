@@ -62,29 +62,29 @@ export default function App() {
       </div>
 
       {/* Header */}
-      <nav className="fixed top-0 w-full z-50 px-4 py-4 flex justify-between items-center bg-white border-b-4 border-black">
-        <div className="flex items-center gap-3">
+      <nav className="fixed top-0 w-full z-50 px-2 sm:px-4 py-3 sm:py-4 flex justify-between items-center bg-white border-b-4 border-black">
+        <div className="flex items-center gap-2 sm:gap-3">
           <img 
             src={LOGO_URL} 
             alt="Trollnaldo Logo" 
-            className="w-12 h-12 rounded-full border-2 border-black"
+            className="w-10 h-10 sm:w-12 sm:h-12 rounded-full border-2 border-black"
             referrerPolicy="no-referrer"
           />
-          <span className="heading-bold text-2xl tracking-tighter hidden sm:block italic">TROLLNALDO</span>
-          <span className="heading-bold text-2xl tracking-tighter sm:hidden">$TROLLNALDO</span>
+          <span className="heading-bold text-xl sm:text-2xl tracking-tighter hidden sm:block italic uppercase">TROLLNALDO</span>
+          <span className="heading-bold text-xl sm:text-2xl tracking-tighter sm:hidden italic uppercase">$TROLLNALDO</span>
         </div>
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-2 sm:gap-4">
           <a 
             href={TELEGRAM_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-black text-white p-3 rounded-lg hover:bg-[#E01E35] transition-colors trollnaldo-shadow"
+            className="bg-black text-white p-2 sm:p-3 rounded-lg hover:bg-[#E01E35] transition-colors trollnaldo-shadow"
             title="Telegram"
           >
-            <Send className="w-6 h-6" />
+            <Send className="w-5 h-5 sm:w-6 sm:h-6" />
           </a>
-          <button className="bg-[#E01E35] text-white px-6 py-3 rounded-lg font-black text-sm uppercase border-2 border-black trollnaldo-shadow-black hover:translate-x-[2px] hover:translate-y-[2px] transition-all">
-            BUY $TROLLNALDO
+          <button className="bg-[#E01E35] text-white px-3 sm:px-6 py-2 sm:py-3 rounded-lg font-black text-xs sm:text-sm uppercase border-2 border-black trollnaldo-shadow-black hover:translate-x-[2px] hover:translate-y-[2px] transition-all">
+            BUY <span className="hidden xs:inline">$TROLLNALDO</span>
           </button>
         </div>
       </nav>
@@ -108,7 +108,7 @@ export default function App() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
-          className="text-6xl sm:text-8xl md:text-9xl mb-6 heading-bold leading-none tracking-tight flex flex-col italic"
+          className="text-5xl xs:text-6xl sm:text-8xl md:text-9xl mb-6 heading-bold leading-none tracking-tight flex flex-col italic"
         >
           <span>THE GREATEST</span>
           <span className="text-[#E01E35]">TROLL FOOTBALLER</span>
@@ -120,7 +120,7 @@ export default function App() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.2 }}
-          className="bg-[#E01E35] text-white px-10 py-3 rounded-lg font-black text-3xl sm:text-5xl mb-10 inline-block trollnaldo-shadow-black border-2 border-black -rotate-1"
+          className="bg-[#E01E35] text-white px-6 sm:px-10 py-2 sm:py-3 rounded-lg font-black text-2xl sm:text-5xl mb-10 inline-block trollnaldo-shadow-black border-2 border-black -rotate-1"
         >
           $TROLLNALDO
         </motion.div>
@@ -142,25 +142,25 @@ export default function App() {
           className="bg-white border-4 border-black p-6 rounded-2xl w-full max-w-4xl mb-12 flex flex-col md:flex-row items-center justify-between gap-6 trollnaldo-shadow"
         >
           <div className="flex flex-col items-center md:items-start overflow-hidden w-full">
-            <span className="text-xs uppercase font-black tracking-widest text-black/50 mb-1">Contract Address (Solana)</span>
-            <code className="text-lg sm:text-2xl font-mono text-black break-all w-full text-center md:text-left font-black select-all tracking-tighter">{CA}</code>
+            <span className="text-[10px] sm:text-xs uppercase font-black tracking-widest text-black/50 mb-1">Contract Address (Solana)</span>
+            <code className="text-sm sm:text-2xl font-mono text-black break-all w-full text-center md:text-left font-black select-all tracking-tighter">{CA}</code>
           </div>
           <button 
             onClick={copyToClipboard}
-            className="flex items-center gap-2 bg-[#E01E35] hover:bg-black text-white px-8 py-4 rounded-xl font-black whitespace-nowrap border-4 border-black transition-all active:translate-y-1"
+            className="flex items-center gap-2 bg-[#E01E35] hover:bg-black text-white px-4 sm:px-8 py-3 sm:py-4 rounded-xl font-black whitespace-nowrap border-4 border-black transition-all active:translate-y-1 text-xs sm:text-base"
           >
             {copied ? <Check className="w-5 h-5" /> : <Copy className="w-5 h-5" />}
             {copied ? "COPIED SIUUU!" : "COPY CONTRACT"}
           </button>
         </motion.div>
 
-        <div className="flex justify-center gap-6 w-full max-w-2xl px-4 text-center">
-          <button className="flex-1 flex items-center justify-center gap-3 bg-black text-white px-8 py-5 rounded-2xl font-black text-2xl hover:bg-[#E01E35] transition-colors trollnaldo-shadow border-2 border-white">
-            <TrendingUp className="w-8 h-8" />
+        <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6 w-full max-w-2xl px-4 text-center">
+          <button className="flex-1 flex items-center justify-center gap-3 bg-black text-white px-8 py-4 sm:py-5 rounded-2xl font-black text-xl sm:text-2xl hover:bg-[#E01E35] transition-colors trollnaldo-shadow border-2 border-white">
+            <TrendingUp className="w-6 h-6 sm:w-8 sm:h-8" />
             CHART
           </button>
-          <button className="flex-1 flex items-center justify-center gap-3 bg-[#E01E35] text-white px-8 py-5 rounded-2xl font-black text-2xl hover:bg-black transition-colors trollnaldo-shadow-black border-2 border-black">
-            <Rocket className="w-8 h-8" />
+          <button className="flex-1 flex items-center justify-center gap-3 bg-[#E01E35] text-white px-8 py-4 sm:py-5 rounded-2xl font-black text-xl sm:text-2xl hover:bg-black transition-colors trollnaldo-shadow-black border-2 border-black">
+            <Rocket className="w-6 h-6 sm:w-8 sm:h-8" />
             BUY
           </button>
         </div>
@@ -207,11 +207,11 @@ export default function App() {
       </section>
 
       {/* How to Join */}
-      <section className="py-24 px-4 bg-white text-black">
+      <section className="py-16 sm:py-24 px-4 bg-white text-black">
         <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-6xl md:text-8xl heading-bold mb-20 italic">HOW TO GET IN THE GAME</h2>
+          <h2 className="text-4xl xs:text-5xl sm:text-7xl md:text-8xl heading-bold mb-12 sm:mb-20 italic">HOW TO GET IN THE GAME</h2>
           
-          <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-6 sm:gap-10 sm:grid-cols-2 lg:grid-cols-4">
             {[
               {
                 icon: Wallet,
@@ -258,30 +258,30 @@ export default function App() {
       </section>
 
       {/* Footer */}
-      <footer className="py-24 px-4 bg-[#E01E35] text-white border-t-8 border-black text-center relative overflow-hidden">
+      <footer className="py-16 sm:py-24 px-4 bg-[#E01E35] text-white border-t-8 border-black text-center relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-full opacity-5 pointer-events-none" style={{ backgroundImage: `url(${LOGO_URL})`, backgroundSize: '150px' }} />
         <div className="relative z-10">
           <img 
             src={LOGO_URL} 
             alt="Trollnaldo Footer Logo" 
-            className="w-32 h-32 mx-auto mb-10 rounded-full border-4 border-black trollnaldo-shadow-black"
+            className="w-20 h-20 sm:w-32 sm:h-32 mx-auto mb-8 sm:mb-10 rounded-full border-4 border-black trollnaldo-shadow-black"
             referrerPolicy="no-referrer"
           />
-          <div className="text-6xl md:text-9xl heading-bold mb-8 leading-none italic tracking-tighter">TROLLNALDO</div>
-          <p className="max-w-3xl mx-auto text-2xl md:text-3xl font-black uppercase italic mb-12 leading-none">
+          <div className="text-5xl sm:text-7xl md:text-9xl heading-bold mb-6 sm:mb-8 leading-none italic tracking-tighter uppercase">TROLLNALDO</div>
+          <p className="max-w-3xl mx-auto text-xl sm:text-3xl font-black uppercase italic mb-10 sm:mb-12 leading-none px-4">
             THE GOAT OF TROLLS. SIUUUUUUUUUUUUUUUU!
           </p>
-          <div className="flex justify-center gap-10">
+          <div className="flex flex-col sm:flex-row justify-center gap-6 sm:gap-10 px-6">
             <a 
               href={TELEGRAM_URL} 
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-black text-white p-6 rounded-2xl hover:bg-white hover:text-black transition-all trollnaldo-shadow border-2 border-white flex items-center justify-center"
+              className="bg-black text-white p-4 sm:p-6 rounded-2xl hover:bg-white hover:text-black transition-all trollnaldo-shadow border-2 border-white flex items-center justify-center"
             >
-              <Send className="w-10 h-10" />
+              <Send className="w-8 h-8 sm:w-10 sm:h-10" />
             </a>
-            <a href="#" className="bg-white text-black p-6 rounded-2xl hover:bg-black hover:text-white transition-all trollnaldo-shadow-black border-2 border-black text-3xl font-black flex items-center gap-4 uppercase">
-              <TrendingUp className="w-10 h-10" />
+            <a href="#" className="bg-white text-black p-4 sm:p-6 rounded-2xl hover:bg-black hover:text-white transition-all trollnaldo-shadow-black border-2 border-black text-xl sm:text-3xl font-black flex items-center justify-center gap-4 uppercase">
+              <TrendingUp className="w-8 h-8 sm:w-10 sm:h-10" />
               CHART
             </a>
           </div>
