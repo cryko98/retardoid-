@@ -409,7 +409,7 @@ export default function App() {
               },
               {
                 icon: ShieldCheck,
-                title: "HOLD ALIEN",
+                title: "HOLD $GAEJOOK",
                 desc: "Welcome to Jotchua and Gaejook's premium community! Hold the line and bark together.",
                 color: "bg-black text-white"
               }
